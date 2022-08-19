@@ -28,4 +28,7 @@ if (Exercise == 'Jog' && airQuality == 'Orange') {
 }
 // This Line tells me if its a good idea for said workout depending on the Air Quality
 
-showOnPage(Summary)
+showOnPage('Air Quality ---> ' + AirVal)
+showOnPage('Air Quality Color ---> ' + AirQuality)
+showOnPage('Workout ---> ' + Exercise)
+showOnPage('Recommendation ---> ' + Summary)

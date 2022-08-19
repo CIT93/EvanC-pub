@@ -1,11 +1,22 @@
-let airQuality = 99
+let airValue = 99
 
-if (airQuality >= 100) {
-    console.log('Air is bad, dont go for a run today')
-} else if(airQuality >= 50 && airQuality < 100) {
-    console.log('Air Quality is okay, maybe cut the run short today')
+if (airValue >= 100) {
+    airQuality = 'Orange'
+} else if(airValue >= 50 && airValue < 100) {
+    airQuality = 'Yellow'
 } else {
-    console.log('Air Quality is good, go for a run!')
+    airQuality = 'Green'
 }
     
+let Exercise = 'Jog'
+
+if (Exercise == 'Jog' && airQuality == 'Orange') {
+    console.log('Air Quality is bad, dont go for a jog')
+} else if(Exercise == "Jog" && airQuality == 'Yellow') {
+    console.log('Air Quality is okay, consider going to the gym')
+} else if(Exercise == "Jog" && airQuality == 'Green') {
+    console.log('Air Quality is good, go for a run!')
+} else {
+    console.log('Everyday is a good day for the gym!')
+}
 

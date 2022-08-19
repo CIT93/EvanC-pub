@@ -15,20 +15,20 @@ if (airValue >= 100) {
     airQuality = 'Green'
 }
 // This Line Turns the Air Quality Number into our standard Air Quality
-let Exercise = 'Jog'
+let exercise = 'Jog'
 // This line defines what type of workout I plan on doing
-if (Exercise == 'Jog' && airQuality == 'Orange') {
-    Summary = 'Air Quality is bad, dont go for a jog'
-} else if(Exercise == "Jog" && airQuality == 'Yellow') {
-    Summary = 'Air Quality is okay, consider going to the gym'
-} else if(Exercise == "Jog" && airQuality == 'Green') {
-    Summary = 'Air Quality is good, go for a run!'
+if (exercise == 'Jog' && airQuality == 'Orange') {
+    summary = 'Air Quality is bad, dont go for a jog'
+} else if(exercise == "Jog" && airQuality == 'Yellow') {
+    summary = 'Air Quality is okay, consider going to the gym'
+} else if(exercise == "Jog" && airQuality == 'Green') {
+    summary = 'Air Quality is good, go for a run!'
 } else {
-    Summary = 'Everyday is a good day for the gym!'
+    summary = 'Everyday is a good day for the gym!'
 }
 // This Line tells me if its a good idea for said workout depending on the Air Quality
 
 showOnPage('Air Quality ---> ' + airValue)
-showOnPage('Air Quality Color ---> ' + AirQuality)
-showOnPage('Workout ---> ' + Exercise)
-showOnPage('Recommendation ---> ' + Summary)
+showOnPage('Air Quality Color ---> ' + airQuality)
+showOnPage('Workout ---> ' + exercise)
+showOnPage('Recommendation ---> ' + summary)

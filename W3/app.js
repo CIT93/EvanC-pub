@@ -16,7 +16,7 @@ let AirQualityChecker = function (airNumber) { // This Function associates Air Q
 }
 
 let workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
-    airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
+    let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
     
     if (exercise == 'Jog' && airQuality == 'Orange') {
         summary = 'Air Quality is bad, dont go for a jog'

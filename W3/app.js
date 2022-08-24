@@ -6,7 +6,8 @@ const showOnPage = function (text) {
 };
 
 let AirQualityChecker = function (airValue) { // This Function associates Air Quality Numbers to standard Air QUality Colors
-        if (airValue >= 100) {
+    let airQuality =  undefined // creating the variable airQuality to mutate it later
+    if (airValue >= 100) {
         airQuality = 'Orange'
     } else if(airValue >= 50 && airValue < 100) {
         airQuality = 'Yellow'

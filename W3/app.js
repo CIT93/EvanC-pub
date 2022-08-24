@@ -5,17 +5,16 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph);
 };
 
-
-let workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
-    let AirQualityChecker = function (airNumber) { // This Function associates Air Quality Numbers to standard Air QUality Colors
-        if (airNumber >= 100) {
-            airQuality = 'Orange'
-        } else if(airNumber >= 50 && airNumber < 100) {
-            airQuality = 'Yellow'
-        } else {
-            airQuality = 'Green'
-        }
+let AirQualityChecker = function (airNumber) { // This Function associates Air Quality Numbers to standard Air QUality Colors
+    if (airNumber >= 100) {
+        return 'Orange'
+    } else if(airNumber >= 50 && airNumber < 100) {
+        return 'Yellow'
+    } else {
+        return 'Green'
     }
+}
+let workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
     if (exercise == 'Jog' && airQuality == 'Orange') {
         summary = 'Air Quality is bad, dont go for a jog'

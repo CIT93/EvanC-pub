@@ -33,4 +33,4 @@ let workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default th
     showOnPage('Recommendation ---> ' + summary)
 }
 
-workoutSummarizer(99, 'Jog')
+workoutSummarizer(99, 'Jog') // Using The Function to Summarize if I should workout today or not

@@ -21,8 +21,8 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 
 
 let workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
+    const airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
     workoutSummary = function (workout) {
-        const airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
         workout.exercise = exercise
         workout.airValue = airValue
         workout.airQuality = airQuality

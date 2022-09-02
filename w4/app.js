@@ -20,7 +20,7 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
     }
 }
 const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
-    const airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
+    let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
     if (exercise == 'Jog' && airQuality == 'Orange') {
         summary = 'Air Quality is bad, dont go for a jog'
     } else if(exercise == "Jog" && airQuality == 'Yellow') {

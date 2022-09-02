@@ -22,26 +22,27 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 
 const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
-    let workoutSummary = function (val) {
-        val.exercise = exercise
-        val.airValue = airValue
-        val.airQuality = airQuality
-        if (workoutToday.exercise == 'Jog' && workoutToday.airQuality  == 'Orange') {
-            val.summary = 'Air Quality is bad, dont go for a jog'
-        } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Yellow') {
-            val.summary = 'Air Quality is okay, consider going to the gym'
-        } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Green') {
-            val.summary = 'Air Quality is good, go for a run!'
-        } else {
-            workout.summary = 'Everyday is a good day for the gym!'
-        }
+    let workout = {
+        exer: `${exercise}`,
+        airVal: `${airValue}`,
+        airQual: `${airQuality}`,
+        sum: undefined
+
     }
-    let workout = workoutSummary(workout)
+        if (workoutToday.exercise == 'Jog' && workoutToday.airQuality  == 'Orange') {
+            workout.sum = 'Air Quality is bad, dont go for a jog'
+        } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Yellow') {
+            workout.sum = 'Air Quality is okay, consider going to the gym'
+        } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Green') {
+            workout.sum = 'Air Quality is good, go for a run!'
+        } else {
+            workout.sum = 'Everyday is a good day for the gym!'
+        }
     
-    showOnPage('Air Quality ---> ' + workout.airValue)
-    // showOnPage('Air Quality Color ---> ' + workout.airQuality)
-    showOnPage('Workout ---> ' + workout.exercise)
-    showOnPage('Recommendation ---> ' + workout.summary)
+    showOnPage('Air Quality ---> ' + workout.airVal)
+    showOnPage('Air Quality Color ---> ' + workout.airQual)
+    showOnPage('Workout ---> ' + workout.exer)
+    showOnPage('Recommendation ---> ' + workout.sum)
 }
 
 workoutSummarizer(99, 'Jog')

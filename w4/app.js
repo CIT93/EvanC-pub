@@ -34,7 +34,7 @@ const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default 
     
 
     showOnPage('Air Quality ---> ' + airValue)
-    showOnPage('Air Quality Color ---> ' + airQuality)
+    showOnPage('Air Quality Color ---> ' + workoutToday.airQuality)
     showOnPage('Workout ---> ' + exercise)
     showOnPage('Recommendation ---> ' + summary)
 }

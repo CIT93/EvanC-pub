@@ -11,7 +11,7 @@ const airquality = {
     grn: 'green'
 }
 const AirQualityChecker = function (airNumber) { // This Function associates Air Quality Numbers to standard Air QUality Colors
-    if (ai'Green'Number >= 100) {
+    if (airNumber >= 100) {
         return airquality.red
     } else if(airNumber >= 50 && airNumber < 100) {
         return airquality.yellow

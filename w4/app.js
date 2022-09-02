@@ -4,28 +4,29 @@ const showOnPage = function (text) {
     let outputDiv = document.getElementById('output');
     outputDiv.append(newParagraph);
 };
-const airquality = {
-    red: 'red',
-    org: 'orange',
-    ylw: 'yellow',
-    grn: 'green'
+
+let workoutToday = {
+    exercise: 'Jog',
+    airQuality: 'green'
 }
 const AirQualityChecker = function (airNumber) { // This Function associates Air Quality Numbers to standard Air QUality Colors
     if (airNumber >= 100) {
-        return airquality.red
+        workoutToday.airQuality = 'orange'
     } else if(airNumber >= 50 && airNumber < 100) {
-        return airquality.yellow
+        workoutToday.airQuality = 'yellow'
     } else {
-        return airquality.green
+        workoutToday.airQuality = 'green'
     }
 }
+
+
 const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
-    let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
-    if (exercise == 'Jog' && airQuality == 'Orange') {
+    const airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
+    if (workoutToday.exercise == 'Jog' && workoutToday.airQuality  == 'Orange') {
         summary = 'Air Quality is bad, dont go for a jog'
-    } else if(exercise == "Jog" && airQuality == 'Yellow') {
+    } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Yellow') {
         summary = 'Air Quality is okay, consider going to the gym'
-    } else if(exercise == "Jog" && airQuality == 'Green') {
+    } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Green') {
         summary = 'Air Quality is good, go for a run!'
     } else {
         summary = 'Everyday is a good day for the gym!'

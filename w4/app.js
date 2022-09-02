@@ -25,11 +25,11 @@ const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default 
         summary: undefined
 
     }
-        if (workoutToday.exercise == 'Jog' && workoutToday.airQuality  == 'Orange') {
+        if (exercise == 'Jog' && workoutToday.airQuality  == 'Orange') {
             workout.sum = 'Air Quality is bad, dont go for a jog'
-        } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Yellow') {
+        } else if(exercise == "Jog" && workoutToday.airQuality == 'Yellow') {
             workout.sum = 'Air Quality is okay, consider going to the gym'
-        } else if(workoutToday.exercise == "Jog" && workoutToday.airQuality == 'Green') {
+        } else if(exercise == "Jog" && workoutToday.airQuality == 'Green') {
             workout.sum = 'Air Quality is good, go for a run!'
         } else {
             workout.sum = 'Everyday is a good day for the gym!'

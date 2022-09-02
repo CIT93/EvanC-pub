@@ -5,17 +5,13 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph);
 };
 
-let workoutToday = {
-    exercise: 'Jog',
-    airQuality: 'green'
-}
 const AirQualityChecker = function (airNumber) { // This Function associates Air Quality Numbers to standard Air QUality Colors
     if (airNumber >= 100) {
-        workoutToday.airQuality = 'Orange'
+        return 'Orange'
     } else if(airNumber >= 50 && airNumber < 100) {
-        workoutToday.airQuality = 'Yellow'
+        return 'Yellow'
     } else {
-        workoutToday.airQuality = 'Green'
+        return 'Green'
     }
 }
 
@@ -26,7 +22,7 @@ const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default 
         exer: `${exercise}`,
         airVal: `${airValue}`,
         airQual: `${airQuality}`,
-        sum: undefined
+        summary: undefined
 
     }
         if (workoutToday.exercise == 'Jog' && workoutToday.airQuality  == 'Orange') {

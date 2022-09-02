@@ -11,11 +11,11 @@ let workoutToday = {
 }
 const AirQualityChecker = function (airNumber) { // This Function associates Air Quality Numbers to standard Air QUality Colors
     if (airNumber >= 100) {
-        workoutToday.airQuality = 'orange'
+        workoutToday.airQuality = 'Orange'
     } else if(airNumber >= 50 && airNumber < 100) {
-        workoutToday.airQuality = 'yellow'
+        workoutToday.airQuality = 'Yellow'
     } else {
-        workoutToday.airQuality = 'green'
+        workoutToday.airQuality = 'Green'
     }
 }
 
@@ -38,5 +38,3 @@ const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default 
     showOnPage('Workout ---> ' + exercise)
     showOnPage('Recommendation ---> ' + summary)
 }
-
-workoutSummarizer(99, 'Jog')

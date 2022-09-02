@@ -22,8 +22,7 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 
 const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default the exercise is the gym
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
-    let workout = workoutSummary(workout)
-    workoutSummary = function (val) {
+    let workoutSummary = function (val) {
         val.exercise = exercise
         val.airValue = airValue
         val.airQuality = airQuality
@@ -37,6 +36,7 @@ const workoutSummarizer = function (airValue, exercise = 'Gym') { // By Default 
             workout.summary = 'Everyday is a good day for the gym!'
         }
     }
+    let workout = workoutSummary(workout)
     
     showOnPage('Air Quality ---> ' + workout.airValue)
     // showOnPage('Air Quality Color ---> ' + workout.airQuality)

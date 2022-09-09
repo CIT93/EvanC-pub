@@ -22,7 +22,7 @@ const workoutCheck = function (workout, airColor) {
     if (airColor == 'Orange' && workout == 'Gym')
         workoutApproved.push(workout)
     else if (airColor == 'Yellow') {
-    workout.push(`${workout} (At Your Own Discretion)`)
+        workoutApproved.push(`${workout} (At Your Own Discretion)`)
     }
     else continue
     }

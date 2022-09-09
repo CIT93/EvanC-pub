@@ -26,7 +26,9 @@ const workoutCheck = function (workout, airColor) {
         showOnPage(workout[count])
         // workoutApproved.push(`${workout[count]} (At Your Own Discretion)`)
     }
-    else continue
+    else {
+        showOnPage('Test')
+    }
     }
     showOnPage(workoutApproved)
 }

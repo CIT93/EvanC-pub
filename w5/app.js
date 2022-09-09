@@ -18,8 +18,8 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 
 const workoutCheck = function (workout, airColor) {
     workoutApproved = []
-    for (let count = 0; count >= workout.length; count++) {
-        showOnPage(workout[count])
+    for (const n of workout ) {
+        showOnPage(n)
         // if (airColor == 'Orange' && workout[count] == 'Gym')
         //     showOnPage(workout[count])
         // // workoutApproved.push(workout[count])

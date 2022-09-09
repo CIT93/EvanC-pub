@@ -20,18 +20,16 @@ const workoutCheck = function (workout, airColor) {
     workoutApproved = []
     for (const n of workout ) {
         if (n == 'Gym')
-            showOnPage('Test 1')
-        // workoutApproved.push(workout[count])
+        workoutApproved.push(n)
         else if (airColor == 'Yellow') {
-            showOnPage('Test 2')
-            // workoutApproved.push(`${workout[count]} (At Your Own Discretion)`)
+            workoutApproved.push(`${n} (At Your Own Discretion)`)
         }
         else {
             showOnPage('Test 3')
             showOnPage(airColor)
         }
     }
-    showOnPage(workout)
+    return workoutApproved
 }
 
 const workoutSummarizer = function (airValue, exercise) { // By Default the exercise is the gym

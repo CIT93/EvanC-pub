@@ -35,13 +35,13 @@ const workoutSummarizer = function (airValue, exercise) { // By Default the exer
         exer: `${exercise}`,
         airVal: `${airValue}`,
         airQual: `${airQuality}`,
-        recommend: `${approved}`
+        recommend: approved
 
     }
     
     showOnPage('Air Quality ---> ' + workout.airVal)
     showOnPage('Air Quality Color ---> ' + workout.airQual)
-    showOnPage('Workout ---> ' + workout.exer)
+    showOnPage('Workouts ---> ' + workout.exer)
     showOnPage('Recommended Workouts ---> ' + workout.recommend)
 }
 

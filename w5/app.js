@@ -24,8 +24,9 @@ const workoutCheck = function (workout, airColor) {
     else if (airColor == 'Yellow') {
     workout.push(`${workout} (At Your Own Discretion)`)
     }
-    else return
+    else continue
     }
+    return workoutApproved
 }
 
 const workoutSummarizer = function (airValue, exercise) { // By Default the exercise is the gym
@@ -38,10 +39,10 @@ const workoutSummarizer = function (airValue, exercise) { // By Default the exer
         recommend: approved
 
     }
-    
+    showOnPage(approved)
     showOnPage('Air Quality ---> ' + workout.airVal)
     showOnPage('Air Quality Color ---> ' + workout.airQual)
-    showOnPage('Workouts ---> ' + workout.exer)
+    showOnPage('Workout ---> ' + workout.exer)
     showOnPage('Recommended Workouts ---> ' + workout.recommend)
 }
 

@@ -20,9 +20,11 @@ const workoutCheck = function (workout, airColor) {
     workoutApproved = []
     for (let count = 0; count >= workout.length; count++) {
     if (airColor == 'Orange' && workout[count] == 'Gym')
-        workoutApproved.push(workout[count])
+        showOnPage(workout[count])
+    // workoutApproved.push(workout[count])
     else if (airColor == 'Yellow') {
-        workoutApproved.push(`${workout[count]} (At Your Own Discretion)`)
+        showOnPage(workout[count])
+        // workoutApproved.push(`${workout[count]} (At Your Own Discretion)`)
     }
     else continue
     }

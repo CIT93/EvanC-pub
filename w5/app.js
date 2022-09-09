@@ -16,7 +16,7 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 }
 
 
-const workoutCheck = function (workout, airColor) {
+const workoutCheck = function (workout, airColor) { // This function runs all workouts through a Checker and approves them based off air quality
     workoutApproved = []
     for (const n of workout ) {
         if (n == 'Gym')
@@ -31,11 +31,11 @@ const workoutCheck = function (workout, airColor) {
     return workoutApproved
 }
 
-const workoutSummarizer = function (airValue, exercise) { // By Default the exercise is the gym
+const workoutSummarizer = function (airValue, exercise) { 
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
-    let approved = workoutCheck(exercise, airQuality)
+    let approved = workoutCheck(exercise, airQuality) // This line runs workoutApproved function to give us approved workouts
     let workout = {
-        exer: exercise.join(', '),
+        exer: exercise.join(', '), // Converting Array to string to add spaces to the list
         airVal: airValue,
         airQual: airQuality,
         recommend: approved

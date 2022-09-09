@@ -19,7 +19,7 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 const workoutCheck = function (workout, airColor) {
     workoutApproved = []
     for (let count = 0; count >= workout.length; count++) {
-        showOnPage('test')
+        showOnPage(workout[count])
         // if (airColor == 'Orange' && workout[count] == 'Gym')
         //     showOnPage(workout[count])
         // // workoutApproved.push(workout[count])
@@ -31,7 +31,7 @@ const workoutCheck = function (workout, airColor) {
         //     showOnPage('Test')
         // }
     }
-    showOnPage(workoutApproved)
+    showOnPage(workout)
 }
 
 const workoutSummarizer = function (airValue, exercise) { // By Default the exercise is the gym

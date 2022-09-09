@@ -28,6 +28,7 @@ const workoutCheck = function (workout, airColor) {
         }
         else {
             showOnPage('Test 3')
+            showOnPage(airColor)
         }
     }
     showOnPage(workout)

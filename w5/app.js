@@ -26,7 +26,7 @@ const workoutCheck = function (workout, airColor) {
     }
     else continue
     }
-    return workoutApproved
+    showOnPage(workoutApproved)
 }
 
 const workoutSummarizer = function (airValue, exercise) { // By Default the exercise is the gym

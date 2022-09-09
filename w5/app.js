@@ -35,7 +35,7 @@ const workoutSummarizer = function (airValue, exercise) { // By Default the exer
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
     let approved = workoutCheck(exercise, airQuality)
     let workout = {
-        exer: exercise,
+        exer: exercise.join(', '),
         airVal: airValue,
         airQual: airQuality,
         recommend: approved

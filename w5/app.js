@@ -19,16 +19,17 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 const workoutCheck = function (workout, airColor) {
     workoutApproved = []
     for (let count = 0; count >= workout.length; count++) {
-    if (airColor == 'Orange' && workout[count] == 'Gym')
         showOnPage(workout[count])
-    // workoutApproved.push(workout[count])
-    else if (airColor == 'Yellow') {
-        showOnPage(workout[count])
-        // workoutApproved.push(`${workout[count]} (At Your Own Discretion)`)
-    }
-    else {
-        showOnPage('Test')
-    }
+        // if (airColor == 'Orange' && workout[count] == 'Gym')
+        //     showOnPage(workout[count])
+        // // workoutApproved.push(workout[count])
+        // else if (airColor == 'Yellow') {
+        //     showOnPage(workout[count])
+        //     // workoutApproved.push(`${workout[count]} (At Your Own Discretion)`)
+        // }
+        // else {
+        //     showOnPage('Test')
+        // }
     }
     showOnPage(workoutApproved)
 }

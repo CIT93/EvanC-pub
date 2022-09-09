@@ -20,9 +20,9 @@ const workoutCheck = function (workout, airColor) {
     workoutApproved = []
     for (const n of workout ) {
         if (n == 'Gym')
-        workoutApproved.push(n)
+        workoutApproved.push(`${n} `)
         else if (airColor == 'Yellow') {
-            workoutApproved.push(`${n} (At Your Own Discretion)`)
+            workoutApproved.push(` ${n} (At Your Own Discretion)`)
         }
         else {
             continue
@@ -35,9 +35,9 @@ const workoutSummarizer = function (airValue, exercise) { // By Default the exer
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
     let approved = workoutCheck(exercise, airQuality)
     let workout = {
-        exer: `${exercise}`,
-        airVal: `${airValue}`,
-        airQual: `${airQuality}`,
+        exer: exercise,
+        airVal: airValue,
+        airQual: airQuality,
         recommend: approved
 
     }
@@ -47,6 +47,6 @@ const workoutSummarizer = function (airValue, exercise) { // By Default the exer
     showOnPage('Recommended Workouts ---> ' + workout.recommend)
 }
 
-workouts = ['Gym ', 'Jog ', , 'Hike ', 'Football ']
+workouts = ['Gym', 'Jog', 'Hike', 'Football']
 
 workoutSummarizer(99, workouts)

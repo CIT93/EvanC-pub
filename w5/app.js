@@ -19,7 +19,7 @@ const AirQualityChecker = function (airNumber) { // This Function associates Air
 const workoutCheck = function (workout, airColor) {
     workoutApproved = []
     for (const n of workout ) {
-        if (airColor == 'Orange' && workout[count] == 'Gym')
+        if (n == 'Gym')
             showOnPage('Test 1')
         // workoutApproved.push(workout[count])
         else if (airColor == 'Yellow') {
@@ -36,7 +36,7 @@ const workoutCheck = function (workout, airColor) {
 
 const workoutSummarizer = function (airValue, exercise) { // By Default the exercise is the gym
     let airQuality = AirQualityChecker(airValue) // This line runs the AirQualityChecker function to give us the Air Quality
-    let approved = workoutCheck(exercise, airValue)
+    let approved = workoutCheck(exercise, airQuality)
     let workout = {
         exer: `${exercise}`,
         airVal: `${airValue}`,

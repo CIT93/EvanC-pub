@@ -25,8 +25,7 @@ const workoutCheck = function (workout, airColor) {
             workoutApproved.push(`${n} (At Your Own Discretion)`)
         }
         else {
-            showOnPage('Test 3')
-            showOnPage(airColor)
+            continue
         }
     }
     return workoutApproved
@@ -42,13 +41,12 @@ const workoutSummarizer = function (airValue, exercise) { // By Default the exer
         recommend: approved
 
     }
-    showOnPage(approved)
     showOnPage('Air Quality ---> ' + workout.airVal)
     showOnPage('Air Quality Color ---> ' + workout.airQual)
     showOnPage('Workout ---> ' + workout.exer)
     showOnPage('Recommended Workouts ---> ' + workout.recommend)
 }
 
-workouts = ['Jog', 'Gym', 'Hike', 'Football']
+workouts = ['Gym ', 'Jog ', , 'Hike ', 'Football ']
 
 workoutSummarizer(99, workouts)

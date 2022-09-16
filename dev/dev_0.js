@@ -5,6 +5,12 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph);
 };
 
+const usernameChecker = function (username) {
+    for (n in userData) {
+        showOnPage(userData.userOne.username)
+    }
+}
+
 let userData = {
     userOne: {
         username: 'Evan',
@@ -16,8 +22,3 @@ const userInput = prompt('Please insert a username')
 
 usernameChecker(userInput)
 
-const usernameChecker = function (username) {
-    for (n in userData) {
-        showOnPage(userData.userOne.username)
-    }
-}

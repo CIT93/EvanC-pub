@@ -5,4 +5,13 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph);
 };
 
-getPassword = prompt('Please insert a password')
+const userData = [{
+    username: 'Evan',
+    password: 'bananas'
+}]
+
+const checkUsername = prompt('Please insert a username')
+
+if (checkUsername == userData.username ) {
+    showOnPage('Welcome')
+}

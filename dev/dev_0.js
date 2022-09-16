@@ -9,7 +9,7 @@ const usernameChecker = function (username) {
     for (n in username) {
         showOnPage(n)
         for (val in n) {
-            showOnPage(val)
+            showOnPage(n.val)
         }
     }
 }

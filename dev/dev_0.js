@@ -6,11 +6,13 @@ const showOnPage = function (text) {
 };
 
 let userData = {
-    username: 'Evan',
-    password: 'bananas'
+    userOne: {
+        username: 'Evan',
+        password: 'bananas'
+    }
 }
 
 const checkUsername = prompt('Please insert a username')
 
 showOnPage(checkUsername)
-showOnPage(userData.username)
+showOnPage(userData.userOne.username)

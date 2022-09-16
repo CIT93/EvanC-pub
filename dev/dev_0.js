@@ -8,15 +8,15 @@ const showOnPage = function (text) {
 const usernameChecker = function (username) {
     for (n in username) {
         showOnPage(n)
-        for (val in n) {
-            showOnPage(n.val)
-        }
     }
 }
 
 let userData = {
     userOne: { 
         username: 'Evan'
+    }
+    userTwo: {
+        username: 'Mike'
     }
 }
 

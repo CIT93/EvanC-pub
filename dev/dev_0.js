@@ -5,7 +5,7 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph);
 };
 
-const userData = [{
+let userData = [{
     username: 'Evan',
     password: 'bananas'
 }]
@@ -13,4 +13,4 @@ const userData = [{
 const checkUsername = prompt('Please insert a username')
 
 showOnPage(checkUsername)
-showOnPage(userData.username)
+showOnPage(userData)

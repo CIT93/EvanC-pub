@@ -6,7 +6,8 @@ const showOnPage = function (text) {
 };
 
 const usernameChecker = function (username) {
-    for (n in userData) {
+    for (n in username) {
+        showOnPage(n)
         showOnPage(Object.keys(n))
     }
 }
@@ -16,8 +17,8 @@ let userData = {
     }
 }
 
-const userInput = prompt('Please insert a username')
+// const userInput = prompt('Please insert a username')
 
-showOnPage(userData.userOne.username)
+// showOnPage(userData.userOne.username)
 usernameChecker(userData)
 

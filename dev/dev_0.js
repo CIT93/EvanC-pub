@@ -13,7 +13,6 @@ const usernameChecker = function (username) {
 
 let userData = {
     userOne: {
-        username: 'Evan',
     }
 }
 

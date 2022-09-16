@@ -8,7 +8,7 @@ const showOnPage = function (text) {
 const usernameChecker = function (username) {
     showOnPage(username)
     for (n in username) {
-        showOnPage(n.username)
+        showOnPage(username.keys)
         
     }
 }

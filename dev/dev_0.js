@@ -12,6 +12,4 @@ const userData = [{
 
 const checkUsername = prompt('Please insert a username')
 
-if (checkUsername == userData.username ) {
-    showOnPage('Welcome')
-}
+showOnPage(checkUsername)

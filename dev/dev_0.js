@@ -13,4 +13,4 @@ let userData = {
 const checkUsername = prompt('Please insert a username')
 
 showOnPage(checkUsername)
-showOnPage(userData.title)
+showOnPage(userData.username)

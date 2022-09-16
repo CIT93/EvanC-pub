@@ -5,10 +5,10 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph);
 };
 
-let userData = [{
+let userData = {
     username: 'Evan',
     password: 'bananas'
-}]
+}
 
 const checkUsername = prompt('Please insert a username')
 

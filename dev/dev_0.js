@@ -15,4 +15,9 @@ let userData = {
 const checkUsername = prompt('Please insert a username')
 
 showOnPage(checkUsername)
-showOnPage(userData.userOne.username)
+
+const usernameChecker = function (username) {
+    for (n in userData) {
+        showOnPage(userData.userOne.username)
+    }
+}

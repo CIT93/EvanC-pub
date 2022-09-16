@@ -4,12 +4,10 @@ const showOnPage = function (text) {
     let outputDiv = document.getElementById('output');
     outputDiv.append(newParagraph);
 };
-
-const usernameChecker = function (username) {
-    for (n in username) {
-        showOnPage(username.keys)
-        
-    }
+const usernameChecker = function (notes, noteTitle) {
+    return notes.find(function (note, index) {
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
+    })
 }
 
 let userData = {
@@ -21,5 +19,5 @@ let userData = {
 // const userInput = prompt('Please insert a username')
 
 // showOnPage(userData.userOne.username)
-usernameChecker(userData)
+usernameChecker(userData, 'Evan')
 

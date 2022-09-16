@@ -12,9 +12,10 @@ let userData = {
     }
 }
 
-const checkUsername = prompt('Please insert a username')
+const userInput = prompt('Please insert a username')
 
 showOnPage(checkUsername)
+usernameChecker(userInput)
 
 const usernameChecker = function (username) {
     for (n in userData) {

@@ -6,10 +6,9 @@ const showOnPage = function (text) {
 };
 
 const usernameChecker = function (username) {
+    showOnPage(username)
     for (n of username) {
-        for (val of n ) {
-            showOnPage(val)
-        }
+        showOnPage(n)
     }
 }
 

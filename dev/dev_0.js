@@ -6,7 +6,7 @@ const showOnPage = function (text) {
 };
 
 const usernameChecker = function (username) {
-    for (n in username) {
+    for (n of username) {
         for (val of n ) {
             showOnPage(val)
         }

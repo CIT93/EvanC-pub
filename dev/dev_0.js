@@ -19,5 +19,5 @@ let userData = {
 // const userInput = prompt('Please insert a username')
 
 // showOnPage(userData.userOne.username)
-usernameChecker(userData, 'Evan')
+ShowOnPage(usernameChecker(userData, 'Evan'))
 

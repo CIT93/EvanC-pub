@@ -4,20 +4,39 @@ const showOnPage = function (text) {
     let outputDiv = document.getElementById('output');
     outputDiv.append(newParagraph);
 };
-const usernameChecker = function (notes, noteTitle) {
-    return notes.find(function (note, index) {
-        return note.title.toLowerCase() === noteTitle.toLowerCase()
+const usernameChecker = function (val) {
+    const index = userData.findIndex(function (note, index) {
+        return note.userName === val
+    
     })
-}
+    
+    if (index < 0 ) {
+        showOnPage('You do not have an account made')
+    } else {
+        const userInputTwo = prompt('Please insert your Password')
+        const indexTwo = userData.findIndex(function (note, index) {
+            return note.passWord === userInputTwo
+        
+        })
+        if (indexTwo === index ) {
+            showOnPage('Welcome!')
+        } else {
+            showOnPage('Incorrect Password')
+        }
+    }
 
-let userData = {
-    userOne: 'Evan',
+} 
 
-    userTwo: 'Mike'
-}
+const userInput = prompt('Please insert a username')
 
-// const userInput = prompt('Please insert a username')
 
-// showOnPage(userData.userOne.username)
-usernameChecker(userData, 'Evan')
+const userData = [ {
+    userName: 'Evan',
+    passWord: 'Apples'
+}, {   
+    userName: 'John',
+    passWord: 'Banana' 
+} ] 
+
+usernameChecker(userInput)
 
